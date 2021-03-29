@@ -7,20 +7,20 @@ def solution(info, query):
         person_list.append(person)
 
     for condition in query:
-        condition = condition.split(" ")
+        condition = condition.replace('and', '').split(" ")
         condition_list.append(condition)
+    result = set()
+    result = set(person_list) & set(condition_list)
 
-    for conditions in condition_list:
-        for i in range(3):
-            conditions.remove('and')
+    print(result)
 
+    print(person_list)
+    print(condition_list)
+'''
     for conditions in condition_list:
         for person in person_list:
             for condition in conditions:
-                
-    print(person_list)
-    print(condition_list)
-    return
+'''
 
 
 info = ["java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"]

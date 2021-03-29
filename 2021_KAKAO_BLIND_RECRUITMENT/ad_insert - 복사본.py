@@ -11,7 +11,7 @@ def solution(play_time, adv_time, logs):
         end = time_to_sec(end)
         for i in range(start, end+1):
             time_table[i] += 1
-    print(time_table)
+
     most_view = 0
     viewers_list = []
 
@@ -20,7 +20,7 @@ def solution(play_time, adv_time, logs):
         most_view = max(most_view, viewers)
         viewers_list.append(most_view)
         viewers_list.append(sec_to_time(i))
-        print(viewers, sec_to_time(i))
+
     adv_end_time = viewers_list[viewers_list.index(most_view)+1]
     adv_end_time = time_to_sec(adv_end_time)
 
